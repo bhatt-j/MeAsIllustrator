@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BOOK YOUR ORDER</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #3598dc;
+}
+
+.main{
+	background: white;
+	border:1px solid;
+	width:400px;
+	height:270px;
+	margin-left:500px;
+	margin-top:80px;
+	border-radius:3px;
+}
+
+table{
+	font-size:20px;
+	border-collapse:separate;
+    border-spacing: 0 15px;
+}
+
+input{
+	width:300px;
+	height:30px;
+	border-radius:8px;
+}
+button{
+	width:125px;
+	height:40px;
+	font-size:15px;
+	background: #3598dc;
+	border-radius:10px;
+	cursor:pointer
+}
+button:hover{
+	background:lightgreen;
+}
+
+.container {
+	margin-right:20px;
+}
+.navigation {
+	width: 98.7%;
+	height: 50px;
+	padding: 10px;
+	background:white;
+}
+.logo {
+	width: 20%;
+	float: left;
+	line-height: 40px;
+	margin-left:30px;
+}
+.navigation-links {
+	text-align: right;
+}
+.navigation-links li {
+	display: inline-block;
+	padding: 5px 20px;
+	border-radius: 20px;
+}
+
+.navigation-links li.active {
+	background-color: rgba(83, 173, 203, .3);
+}
+
+.navigation-links li:hover {
+	background-color: rgba(83, 173, 203, 1);
+	color: #fff;
+	cursor: pointer;
+}
+
+
+</style>
+
+<script>
+function checkForm(form)
+{
+    if(form.email.value == "") {
+        alert("Enter Email-Id!");
+          form.email.focus();
+          return false;
+    }
+	if(form.password.value == "") {
+        alert("Enter Password!");
+          form.password.focus();
+          return false;
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+	<nav class="navigation">
+        <div class="logo"><img src="D:\github\MeAsIllustrator\frontend\src\images\logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+        <div class="container">
+            <ul class="navigation-links">
+                <li><a href="home.html" style="text-decoration:none; color:black;">Home</a></li>
+                <li><a href="#" style="text-decoration:none; color:black;">Categories</a></li>
+                <li><a href="userprofile.html" style="text-decoration:none; color:black;">Profile</a></li>
+                <li><a href="login.html" style="text-decoration:none; color:black;">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+<h1><i><center>Book Orders</center></i></h1>
+	<div class="main"><center>
+		<table>
+		<tr>  
+			<th colspan="2"> Your order </th>  
+		</tr>  
+
+		<tr>  
+			<td> Product Name : </td>
+			<td>Solo Illustration</td>
+		</tr>
+
+		<tr>
+			<td> Price : </td>
+			<td>1200</td>
+		</tr>
+
+		<tr>
+			<td> Quantity : </td>
+			<td>1</td> 
+		</tr>  
+		
+		<tr>  
+			<td> Total : </td>
+			<td>1200</td>
+		</tr> 				    
+		</table></center>
+	</div>
+	
+
+</body>
+</html>

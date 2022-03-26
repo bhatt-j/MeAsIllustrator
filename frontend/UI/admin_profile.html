@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #3598dc;
+}
+.main{
+	background: white;
+	border:1px solid;
+	width:525px;
+	height:330px;
+	margin-left:525px;
+	margin-top:100px;
+	border-radius:3px;
+}
+subclass{
+	font-size:20px;
+}
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	width:350px;
+	height:30px;
+}
+      
+button{
+	width:125px;
+	height:40px;
+	font-size:15px;
+	background: #3598dc;
+	border-radius:10px;
+	cursor:pointer
+}
+button:hover{
+	background:lightgreen;
+	margin-left:20px;
+}
+
+.container {
+	margin-right:20px;
+}
+.navigation {
+	width: 98.7%;
+	height: 50px;
+	padding: 10px;
+	background:white;
+}
+.logo {
+	width: 20%;
+	float: left;
+	line-height: 40px;
+	margin-left:30px;
+}
+.navigation-links {
+	text-align: right;
+}
+.navigation-links li {
+	display: inline-block;
+	padding: 5px 20px;
+	border-radius: 20px;
+}
+
+.navigation-links li.active {
+	background-color: rgba(83, 173, 203, .3);
+}
+
+.navigation-links li:hover {
+	background-color: rgba(83, 173, 203, 1);
+	color: #fff;
+	cursor: pointer;
+}
+</style>
+
+<script>
+function checkForm(form)
+{
+    if(form.name.value == "") {
+        alert("Enter Name!");
+          form.name.focus();
+          return false;
+    }
+	
+	if(form.mobile.value.length != 10) {
+		alert("Enter valid Mobile No.");
+		form.mobile.focus();
+		return false;
+	}
+	if(form.email.value == "") {
+		alert("Enter Email-Id");
+		form.email.focus();
+		return false;
+	}
+	re =  /\S+@\S+\.\S+/;
+	if(!re.test(form.email.value)) {
+		alert("Enter valid Email-Id");
+		form.email.focus();
+		return false;
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body>
+	<nav class="navigation">
+        <div class="logo"><img src="D:\github\MeAsIllustrator\frontend\src\images\logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+        <div class="container">
+            <ul class="navigation-links">
+                <li class="active"><a href="home.html" style="text-decoration:none; color:black;">Home</a></li>
+                <li><a href="#" style="text-decoration:none; color:black;">Categories</a></li>
+                <li><a href="userprofile.html" style="text-decoration:none; color:black;">Profile</a></li>
+                <li><a href="login.html" style="text-decoration:none; color:black;">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class = "main"><center>
+<h1>Admin Profile</h1>
+	<p style="font-size: 20px; font-weight: bold;">- My Profile</p>
+	<p style="font-size: 20px; font-weight: bold;">- My Categories</p>
+	<p style="font-size: 20px; font-weight: bold;">- My Products</p>	
+</div>
+</body>
+</html>
