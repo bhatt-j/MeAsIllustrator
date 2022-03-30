@@ -1,50 +1,33 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="D:\github\MeAsIllustrator\frontend\src\css\general.css">  
     <style>
-        body 
+        .uiLogo1
         {
-            margin: 0;
-            padding: 0;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background: rgb(255, 200, 21);
+            height : 80%;
+            position: absolute;
+            margin-top: 0%;
+            margin-left: 30%;            
         }
-        .navigation 
+        .uiText
         {
-            width: 98.7%;
-            height: 50px;
-            padding: 10px;
-            background:rgb(17, 17, 17);  
-            color: #fff;          
+            height : 60%;
+            width: 75%;
+            position: absolute;
+            margin-top: 15%;
+            margin-left: -2%;            
         }
-        .logo {
-            width: 20%;
-            float: left;
-            line-height: 40px;
-            margin-left:30px;
-        }
-        .navigation-links {
-            text-align: right;
-        }
-        .navigation-links li {
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 20px;
-        }
-
-        .navigation-links li.active {
-            background-color: rgba(83, 173, 203, .3);
-        }
-
-        .navigation-links li:hover {
-            background-color: rgb(203, 181, 83);
-            color: #fff;
-            cursor: pointer;
+        .new_tr
+        {
+            width: 100%;
+            margin-top: 45%;
         }
 
         .tr1{
             margin-top: -5px;
             width: 40%;
-            margin-left: -18%;
+            margin-left: -18%;            
         }
 
         .tr2{
@@ -68,28 +51,23 @@
         .trending{
             height: 30%;
             opacity: 1;
-        }
-        
-        .logo{
-            height: 120%;
-            margin-top: -5px;
-            margin-left: 0px;
-        }
-        
+        }               
         .uiOne
         {
             height : 100%;
             position: absolute;
             margin-top: 0px;
+            margin-left: -30%;
         }
 
-        .footer
+        .uitwo
         {
-            height: 250px;
-            background-color: black;
-            padding: 20px;
+            height : 100%;
+            position: relative;
+            margin-top: -40%;
+            margin-left: 64%;            
         }
-
+               
         .services{
             height: 40%;            
             position: relative;
@@ -99,18 +77,20 @@
         .sr1{
             margin-top: 10px;
             width: 23%;            
-            margin-left: -60%;
+            margin-left: -50%;
             background-color: black;
+            position: relative;
             color: rgb(255, 255, 255);
             padding: 10px;
             padding-top: 20px;
             border-radius: 30px;
         }
         .sr2{
-            margin-top: -350px;
+            margin-top: -340px;
             width: 23%;
-            margin-left: -10%;
+            margin-left: 0%;
             background-color: black;
+            position: relative;
             color: rgb(255, 255, 255);
             padding: 10px;
             padding-top: 20px;
@@ -118,14 +98,27 @@
         }
 
         .sr3{
-            margin-top: -350px;
+            margin-top: -25%;
             width: 23%;
-            margin-left: 40%;
+            margin-left: 50%;
             background-color: black;
+            position: relative;
             color: rgb(255, 255, 255);
             padding: 10px;
             padding-top: 20px;
             border-radius: 30px;
+            z-index: 100;            
+        }
+        .sr1:hover{
+            background-color: none;
+            background-image: url("ui_1.png");            
+        }
+
+        .footer
+        {
+            height: 200px;
+            background-color: black;
+            padding: 20px;
         }
     </style>
 </head>
@@ -135,7 +128,7 @@
         <div class="container">
             <ul class="navigation-links">
                 <li class="active"><a href="home.html" style="text-decoration:none; color:rgb(255, 255, 255);">Home</a></li>
-                <li><a href="#" style="text-decoration:none; color:rgb(255, 255, 255);">Categories</a></li>
+                <li><a href="#category" style="text-decoration:none; color:rgb(255, 255, 255);">Categories</a></li>
                 <li><a href="userprofile.html" style="text-decoration:none; color:rgb(255, 255, 255);">Profile</a></li>
                 <li><a href="login.html" style="text-decoration:none; color:rgb(255, 255, 255);">Login</a></li>
             </ul>
@@ -143,8 +136,12 @@
     </nav>
 
     <img src="D:\github\MeAsIllustrator\frontend\src\images\ui_1.png" class="uiOne">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\logo1.png" class="uiLogo1">    
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\text.png" class="uiText">    
+
 
 <center>    
+<div class = new_tr>
     <h1>New Products</h1> <!------------------------------------------------------------------------------->
     
     <div class = "tr1">
@@ -158,7 +155,7 @@
         <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_solo_doodle.png" alt="Italian Trulli" class = "trending">          
         <p style="font-weight: bold;">Doodle background</p> 
     </div>    
-</a>
+    </a>
 
     <h1>Trending Products</h1> <!------------------------------------------------------------------------------->
 
@@ -174,6 +171,7 @@
         <p style="font-weight: bold;">Doodle background</p> 
     </div>
     
+</div>
     <h1>Gallery</h1><!------------------------------------------------------------------------------->
 <marquee>
     <div class = "tr1">
@@ -197,7 +195,7 @@
     </div>
 </marquee>
 
-<h1>Our Services</h1><!------------------------------------------------------------------------------->
+<h1 id="category">Our Services</h1><!------------------------------------------------------------------------------->
 
 <div class = "sr1">
     <img src="D:\github\MeAsIllustrator\frontend\src\images\e_invite_single.jpg" alt="E-invite-single" class = "services">          
@@ -219,8 +217,34 @@
     <p style="font-weight: bold;">Solo Illustration</p> 
 </div>
 
+<div class = "sr2">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_solo_doodle.png" alt="Italian Trulli" class = "services">          
+    <p style="font-weight: bold;">Illustration Doodle Art</p> 
+</div>
+
+<div class = "sr3">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_family_illustration.png" alt="Italian Trulli" class = "services">          
+    <p style="font-weight: bold;">Family Illustration</p> 
+</div>
+
+<div class = "sr1">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_solo_doodle.png" alt="Italian Trulli" class = "services">          
+    <p style="font-weight: bold;">Solo Illustration</p> 
+</div>
+
+<div class = "sr2">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_solo_doodle.png" alt="Italian Trulli" class = "services">          
+    <p style="font-weight: bold;">Illustration Doodle Art</p> 
+</div>
+
+<div class = "sr3">
+    <img src="D:\github\MeAsIllustrator\frontend\src\images\digi_family_illustration.png" alt="Italian Trulli" class = "services">          
+    <p style="font-weight: bold;">Family Illustration</p> 
+</div>
 
 
+<br>
+<img src="D:\github\MeAsIllustrator\frontend\src\images\ui_2.png" class="uitwo">
 <div class="footer">
     <p style="color: #fff;">
         Email : jbhatt.measillustrator@gmail.com

@@ -5,17 +5,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: #3598dc;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: rgb(255, 200, 21);
 }
 .main{
 	background: white;
 	border:1px solid;
-	width:525px;
-	height:330px;
-	margin-left:525px;
-	margin-top:100px;
+	width:50%;
+	height:50%;
+	margin-left:25%;
+	margin-top:10%;
 	border-radius:3px;
+	padding: 2%;	
 }
 subclass{
 	font-size:20px;
@@ -25,7 +26,7 @@ input {
 	border-right-style: hidden;
 	border-left-style: hidden;
 	border-bottom-style: groove;
-	width:350px;
+	width:50%;
 	height:30px;
 }
       
@@ -33,48 +34,70 @@ button{
 	width:125px;
 	height:40px;
 	font-size:15px;
-	background: #3598dc;
+	background: rgb(0, 0, 0);
 	border-radius:10px;
-	cursor:pointer
+	cursor:pointer;	
+	color:#fff;
 }
 button:hover{
 	background:lightgreen;
-	margin-left:20px;
+	font-weight: bold;
+	color:rgb(0, 0, 0);
 }
 
 .container {
 	margin-right:20px;
 }
 .navigation {
-	width: 98.7%;
-	height: 50px;
-	padding: 10px;
-	background:white;
+	position: sticky; 
+            z-index: 200;
+            width: 98.5%;
+            height: 50px;
+            padding: 10px;
+            background:rgb(17, 17, 17);             
+            color: #fff; 
 }
 .logo {
-	width: 20%;
-	float: left;
-	line-height: 40px;
-	margin-left:30px;
+            width: 25%;
+            float: left;
+            line-height: 40px;
+			margin-top: -0.5%;
+            margin-left:30px;
+        }
+
+a{
+	color:rgb(255, 255, 255);
 }
+
 .navigation-links {
 	text-align: right;
 }
 .navigation-links li {
 	display: inline-block;
-	padding: 5px 20px;
+	padding: 5px 20px;	
 	border-radius: 20px;
 }
 
 .navigation-links li.active {
-	background-color: rgba(83, 173, 203, .3);
+	background-color: rgba(224, 245, 109, 0.3);
 }
 
 .navigation-links li:hover {
-	background-color: rgba(83, 173, 203, 1);
-	color: #fff;
+	background-color: rgb(255, 200, 21);
+	
 	cursor: pointer;
 }
+
+	.ui_grid
+    {
+        height : 10%;
+		width: 32%;
+		position: relative;		
+        margin-top: -40%;
+		margin-left: 68%;
+		opacity: 0.8;
+    }
+
 </style>
 
 <script>
@@ -114,10 +137,10 @@ function checkForm(form)
         <div class="logo"><img src="D:\github\MeAsIllustrator\frontend\src\images\logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
         <div class="container">
             <ul class="navigation-links">
-                <li class="active"><a href="home.html" style="text-decoration:none; color:black;">Home</a></li>
-                <li><a href="#" style="text-decoration:none; color:black;">Categories</a></li>
-                <li><a href="userprofile.html" style="text-decoration:none; color:black;">Profile</a></li>
-                <li><a href="login.html" style="text-decoration:none; color:black;">Login</a></li>
+                <li><a href="home.html" style="text-decoration:none;">Home</a></li>
+				<li class="active"><a href="userprofile.html" style="text-decoration:none;">Profile</a></li>
+                <li><a href="#" style="text-decoration:none;">Previous Orders</a></li>                
+                <li><a href="#" style="text-decoration:none;">Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -132,7 +155,8 @@ function checkForm(form)
 		<button type="submit" value="Submit">Edit Profile</button>
 
 	</form>
-	</div></center>
+	</div></center>	
 </div>
+<img src="D:\github\MeAsIllustrator\frontend\src\images\ui_grid.png" alt="Italian Trulli" class = "ui_grid">
 </body>
 </html>
