@@ -51,3 +51,27 @@
     {
         margin-right:20px;
     }
+
+    button
+    {
+        width:125px;
+        height:40px;
+        font-size:15px;
+        font-weight: bold;
+        color: aliceblue;
+        background: #000000;
+        border-radius:10px;
+        cursor:pointer
+    }
+    button:hover
+    {
+	    background:lightgreen;
+	    color: rgb(0, 0, 0);
+    }   
+
+    input
+    {
+        width:300px;
+        height:30px;
+        border-radius:8px;
+    } 
