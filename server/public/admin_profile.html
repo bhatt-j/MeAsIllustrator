@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href=" general.css">  
+<style>
+.main{
+	background: white;
+	border:1px solid;
+	width:40%;
+	height:330px;
+	margin-left:30%;
+	margin-top:3%;
+	border-radius:3px;
+}
+subclass{
+	font-size:20px;
+}
+
+.main2{
+	background: rgb(255, 255, 255);
+	border:1px solid;
+	width:40%;	
+	margin-left:30%;
+	margin-top:1%;
+	text-align: center;
+	border-radius:9px;
+}
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	width:350px;
+	height:30px;
+}   
+</style>
+
+<script>
+function checkForm(form)
+{
+    if(form.name.value == "") {
+        alert("Enter Name!");
+          form.name.focus();
+          return false;
+    }
+	
+	if(form.mobile.value.length != 10) {
+		alert("Enter valid Mobile No.");
+		form.mobile.focus();
+		return false;
+	}
+	if(form.email.value == "") {
+		alert("Enter Email-Id");
+		form.email.focus();
+		return false;
+	}
+	re =  /\S+@\S+\.\S+/;
+	if(!re.test(form.email.value)) {
+		alert("Enter valid Email-Id");
+		form.email.focus();
+		return false;
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body>
+	<nav class="navigation">
+        <div class="logo"><img src="images\logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+        <div class="container">
+            <ul class="navigation-links">
+                <li><a href="home.html" style="text-decoration:none; color:rgb(255, 255, 255);">Home</a></li>
+                <li><a href="#" style="text-decoration:none; color:rgb(255, 255, 255);">Categories</a></li>
+                <li class="active"><a href="admin_profile.html" style="text-decoration:none; color:rgb(255, 255, 255);">Profile</a></li>
+                <li><a href="login.html" style="text-decoration:none; color:rgb(255, 255, 255);">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class = "main"><center>
+<h1>Admin Profile</h1>
+<div class="subclass">
+	<form onsubmit="return (checkForm(this) && false);" action="login.html" method="POST">
+		<input type="text" placeholder="Enter Name" name="name"><br><br>
+		<input type="text" placeholder="Enter Mobile No." name="mobile"><br><br>
+		<input type="text" placeholder="Enter Email-Id" name="email"><br><br><br>
+
+		<button type="submit" value="Submit">Edit Profile</button>
+
+	</form>
+</div>
+</div>
+<a href="#" style="text-decoration:none; color:rgb(0, 0, 0);"><div class = "main2"><p style="font-size: 20px; font-weight: bold;">Orders</p></div></a>
+<a href="#" style="text-decoration:none; color:rgb(0, 0, 0);"><div class = "main2"><p style="font-size: 20px; font-weight: bold;">My Categories</p></div></a>
+<a href="#" style="text-decoration:none; color:rgb(0, 0, 0);"><div class = "main2"><p style="font-size: 20px; font-weight: bold;">My Products</p></div></a>
+
+</body>
+</html>

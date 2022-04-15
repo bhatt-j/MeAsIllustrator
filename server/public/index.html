@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="general.css">  
+<style>
+.main{
+	background: white;
+	border:1px solid;
+	width:525px;
+	height:430px;
+	margin-left:32%;
+	margin-top:60px;
+	border-radius:3px;
+}
+table{
+	font-size:20px;
+	border-collapse:separate;
+    border-spacing: 0 15px;
+}
+input{
+	width:300px;
+	height:30px;
+	border-radius:8px;
+}
+button{
+	width:125px;
+	height:40px;
+	font-size:15px;
+	background: #3598dc;
+	border-radius:10px;
+	cursor:pointer
+}
+button:hover{
+	background:lightgreen;
+}
+
+.container {
+	margin-right:20px;
+}
+</style>
+
+<script>
+function checkForm(form)
+{
+    if(form.name.value == "") {
+        alert("Enter Name!");
+          form.name.focus();
+          return false;
+    }
+	
+	if(form.mobile.value.length != 10) {
+		alert("Enter valid Mobile No.");
+		form.mobile.focus();
+		return false;
+	}
+	if(form.email.value == "") {
+		alert("Enter Email-Id");
+		form.email.focus();
+		return false;
+	}
+	re =  /\S+@\S+\.\S+/;
+	if(!re.test(form.email.value)) {
+		alert("Enter valid Email-Id");
+		form.email.focus();
+		return false;
+	}
+		
+	if(form.password.value == "") {
+		alert("Enter Password!");
+		form.password.focus();
+		return false;
+	}
+	re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+	if(!re.test(form.password.value)) {
+		alert("Enter valid password!");
+		form.password.focus();
+		return false;
+	}
+	
+	if(form.cpassword.value == "") {
+		alert("Enter Confirm Password!");
+		form.cpassword.focus();
+		return false;
+	}
+	
+	if(form.password.value != form.cpassword.value) {
+		alert("Password and Confirm Password must be same!");
+		form.cpassword.focus();
+		return false;
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+<nav class="navigation">
+	<div class="logo"><img src="images\logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+  <div class="container">
+    <ul class="navigation-links">
+      <li class="active"><a href="index.html" style="text-decoration:none; color:rgb(255, 255, 255);">Registration</a></li>
+      <li><a href="login.html" style="text-decoration:none; color:rgb(255, 255, 255);">Login</a></li>
+      <li><a href="aboutus.html" style="text-decoration:none; color:rgb(255, 255, 255);">About Us</a></li>
+      <li><a href="contactus.html" style="text-decoration:none; color:rgb(255, 255, 255);">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div class = "main">
+<h1>Register Here</h1>
+	<form  action="/user" method="post">
+		<table>
+		<tr>
+			<td><label>Name : </label></td>
+			<td><input type="text" placeholder="Enter Name" name="name" id="name"></td>
+		</tr>
+		<tr>
+			<td><label>Mobile No. : </label></td>
+			<td><input type="text" placeholder="Enter Mobile No." name="mobile" id="mobile"></td>
+		</tr>	
+		<tr>
+			<td><label>Email-Id : </label></td>
+			<td><input type="text" placeholder="Enter Email-Id" name="email" id="email"><br></td>
+		</tr>
+		<tr>
+			<td><label>Password : </label></td>
+			<td><input type="password" placeholder="Enter Password" name="password" id="password"></td>
+		</tr>
+		<tr>
+			<td><label>Confirm Password : </label></td>
+			<td><input type="password" placeholder="Enter Confirm Password" name="cpassword"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button type="submit" value="Submit">Submit</button>
+				<button type="reset" value="Reset">Reset</button>
+			</td>
+		</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>
