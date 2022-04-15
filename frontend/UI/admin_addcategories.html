@@ -7,9 +7,9 @@
         background: white;
         border:1px solid;
         width:525px;
-        height:80%;
+        height:30%;
         margin-left:30%;
-        margin-top:3%;
+        margin-top:10%;
         border-radius:3px;
         z-index: 100;
     }               
@@ -38,11 +38,22 @@
     </nav>
 
 
-    
-	<a href="admin_addproduct.html"><button type="submit" value="Submit">+</button></a>
-	
-	
-	
+    <div class = "main">
+        <h2 style="margin-left: 200px;">Add Category</h2>
+    <form onsubmit="return (checkForm(this) && false);" action="admin_mycategories.html" method="POST">
+		<table>
+		<tr>
+			<td><label>Category Name : </label></td>
+			<td><input type="text" placeholder="name" name="pname"></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><button type="submit" value="Submit">Submit</button>
+				<button type="reset" value="Reset">Reset</button>
+			</td>
+		</tr>
+		</table>
 	</form>
     </div>   
 </body>
