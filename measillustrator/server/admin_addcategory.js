@@ -20,33 +20,22 @@ var db = mongoose.connection;
 db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
-app.post("/product",(req,res)=>{
-    var pr_name = req.body.pname;
-    var cat = req.body.category;
-    var image = req.body.pimage;
-    var desc = req.body.description;
-    var time = req.body.time;
-    var type = req.body.type;
-    var slots = req.body.slots;
+app.post("/category",(req,res)=>{    
+    var catname = req.body.cname;
+    
 
-    var data = {
-        "ProductName": pr_name,
-        "Category" : cat,
-        "Image": image,
-        "Description" : desc,
-        "Time": time,
-        "Type": type,
-        "Slots": slots
+    var data = {        
+        "CategoryName" : catname        
     }
 
-    db.collection('product').insertOne(data,(err,collection)=>{
+    db.collection('category').insertOne(data,(err,collection)=>{
         if(err){
             throw err;
         }
         console.log("Record Inserted Successfully");
     });
 
-    return res.redirect('admin_addproduct.html')
+    return res.redirect('admin_addcategory.html')
 
 })
 
@@ -55,6 +44,6 @@ app.get("/",(req,res)=>{
     res.set({
         "Allow-access-Allow-Origin": '*'
     })
-    return res.redirect('admin_addproduct.html');
+    return res.redirect('admin_addcategory.html');
 }).listen(3000);
 
