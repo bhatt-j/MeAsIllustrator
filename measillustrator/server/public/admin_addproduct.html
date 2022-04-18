@@ -40,35 +40,35 @@
 
     <div class = "main">
         <h2 style="margin-left: 200px;">Add Product</h2>
-    <form onsubmit="return (checkForm(this) && false);" action="login.html" method="POST">
+    <form onsubmit="return (checkForm(this) && false);" action="/addproduct" method="POST">
 		<table>
 		<tr>
 			<td><label>Product Name : </label></td>
-			<td><input type="text" placeholder="name" name="pname" id="pname"></td>
+			<td><input type="text" placeholder="name" name="name"></td>
 		</tr>
 		<tr>
 			<td><label>Product Category : </label></td>
-			<td><input type="text" placeholder="category" name="category" id="category"></td>
+			<td><input type="text" placeholder="category" name="cname"></td>
 		</tr>	
 		<tr>
 			<td><label>Product Image : </label></td>
-			<td><input type="file" placeholder="Enter Email-Id" name="pimage" id="pimage"><br></td>
+			<td><input type="file" placeholder="Enter Email-Id" name="image"><br></td>
 		</tr>
 		<tr>
 			<td><label>Description : </label></td>
-		<td><textarea rows=6 cols=38 style="border-radius:8px;" placeholder="Enter Subject" name="description" id="description"> </textarea></td>
+		<td><textarea rows=6 cols=38 style="border-radius:8px;" placeholder="Enter Subject" name="description"> </textarea></td>
 		</tr>
 		<tr>
-			<td><label>Estimation Time (in days): </label></td>
-			<td><input type="text" placeholder="required time" name="time" id="time"></td>
+			<td><label>Estimation Time : </label></td>
+			<td><input type="text" placeholder="required time" name="e_time"></td>
 		</tr>
 		<tr>
 			<td><label>Type : </label></td>
-			<td><input type="text" placeholder="type" name="type" id="type"></td>
+			<td><input type="text" placeholder="type" name="type"></td>
 		</tr>
         <tr>
 			<td><label>Slots : </label></td>
-			<td><input type="number" placeholder="1" name="slots" id="slots"></td>
+			<td><input type="number" placeholder="1" name="slot"></td>
 		</tr>
 		<tr>
 			<td></td>

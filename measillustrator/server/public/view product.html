@@ -83,7 +83,7 @@
         </div>
 
 
-    <form onsubmit="return (checkForm(this) && false);" action="Bookorder_digi.html" method="POST">
+    <form onsubmit="return (checkForm(this) && false);" action="/Bookorder_digi" method="POST">
 		<table>
         <tr>
             <td><label>Product Description : </label></td>
@@ -91,14 +91,14 @@
         </tr>		
 		<tr>
 			<td><label>Theme : </label></td>
-			<td><p style="font-size: 20px;"><input type="radio" id="html" name="fav_language" value="Detailed" style="height: 15px;">Detailed
-                <input type="radio" id="css" name="fav_language" value="Minimal" style="height: 15px;">Minimal           
-                <input type="radio" id="javascript" name="fav_language" value="Flat" style="height: 15px;">Flat</p>    
+			<td><p style="font-size: 20px;"><input type="radio"  name="fav_language" value="Detailed" style="height: 15px;">Detailed
+                <input type="radio"  name="fav_language" value="Minimal" style="height: 15px;">Minimal           
+                <input type="radio"  name="fav_language" value="Flat" style="height: 15px;">Flat</p>    
             </td>            
 		</tr>	
 		<tr>
 			<td><label>No of Characters : </label></td>
-			<td><input type="number" placeholder="1"><br></td>
+			<td><input type="number" placeholder="1" name="character"><br></td>
 		</tr>
         <tr>
 			<td><label>Your Image : </label></td>
@@ -106,16 +106,15 @@
 		</tr>
 		<tr>
 			<td><label>Extra comments : (if any) </label></td>
-		<td><textarea rows=6 cols=38 style="border-radius:8px;" placeholder="Enter Subject" name="address"> </textarea></td>
+		<td><textarea rows=6 cols=38 style="border-radius:8px;" placeholder="Enter Subject" name="comments"> </textarea></td>
 		</tr>
 		<tr>
 			<td><label>Estimation Date : </label></td>
-			<td><input type="date" placeholder="required time" name="time"></td>
+			<td><input type="date" placeholder="required time" name="date"></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><button type="submit" value="book">Book your order</button>
-				<button type="reset" value="Reset">Add to cart</button>
 			</td>
 		</tr>
 		</table>

@@ -106,9 +106,9 @@ function checkForm(form)
     </ul>
   </div>
 </nav>
-<div class = "main">
+<div class = "main"><center>
 <h1>Register Here</h1>
-	<form  action="/user" method="post">
+	<form  onsubmit="return (checkForm(this) && false);"  action="/user" method="post">
 		<table>
 		<tr>
 			<td><label>Name : </label></td>
@@ -137,7 +137,7 @@ function checkForm(form)
 			</td>
 		</tr>
 		</table>
-	</form>
+	</form></center>
 </div>
 </body>
 </html>
