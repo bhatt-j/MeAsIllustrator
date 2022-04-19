@@ -9,7 +9,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({
     extended:true
 }))
-
+////////////////////////////////////////////////////////////////////////////////////////////
 mongoose.connect('mongodb+srv://measillustrator:202112055@cluster0.7h0ce.mongodb.net/measillustrator',{
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -69,6 +69,26 @@ app.post("/contactus",(req,res)=>{
     return res.redirect('contactus.html')
 
 })
+
+app.post("/addfeedback",(req,res)=>{
+    var feed = req.body.feedback;
+    
+    var data = {
+        //"UID": email,
+        "FeedBack": feed        
+    }
+
+    db.collection('feedback').insertOne(data,(err,collection)=>{
+        if(err){
+            throw err;
+        }
+        console.log("Record Inserted Successfully");
+    });
+
+    return res.redirect('contactus.html')
+
+})
+
 
 app.post("/addcategory",(req,res)=>{
     var name = req.body.name;
