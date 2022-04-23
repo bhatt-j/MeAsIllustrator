@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../.././css/general.css">
+<style>
+.main{
+	background: white;
+	border:1px solid;
+	width:525px;
+	height:340px;
+	margin-left:32%;
+	margin-top:10%;
+	border-radius:3px;
+}
+table{
+	font-size:20px;
+	border-collapse:separate;
+    border-spacing: 0 15px;
+}
+h1{
+	margin-top:50px;
+}
+input{
+	width:300px;
+	height:30px;
+	border-radius:8px;
+}
+button{
+	width:125px;
+	height:40px;
+	font-size:15px;
+	background: #3598dc;
+	border-radius:10px;
+	cursor:pointer
+}
+button:hover{
+	background:lightgreen;
+}
+
+</style>
+
+</head>
+
+<body>
+<nav class="navigation">
+	<div class="logo"> <img  src="../.././img/logo.png"   alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+  <div class="container">
+    <ul class="navigation-links">
+      <li><a href="signup" style="text-decoration:none; color:rgb(255, 255, 255);">Registration</a></li>
+      <li class="active"><a href="login" style="text-decoration:none; color:rgb(255, 255, 255);">Login</a></li>
+      <li><a href="aboutus" style="text-decoration:none; color:rgb(255, 255, 255);">About Us</a></li>
+      <li><a href="contactus" style="text-decoration:none; color:rgb(255, 255, 255);">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div class = "main"><center>
+<h1>Login Here</h1>
+	<form onsubmit="return (checkForm(this) && false);" action="/login" method="post">
+		<table>
+		<tr>
+			<td><label>Email-Id : </label></td>
+			<td><input type="text" placeholder="Enter Email-Id" name="email"><br></td>
+			<div class="email error"></div>
+		</tr>
+			<td><label>Password : </label></td>
+			<td><input type="password" placeholder="Enter Password" name="password"></td>
+			<div class="password error"></div>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="forgetpassword.html" style="float:right;font-size:15px;">forget password?</a></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button type="submit" value="Submit">Login</button>
+				<button type="reset" value="Reset">Reset</button>
+			</td>
+		</tr>
+		</table>
+	</form></center>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: rgb(255, 200, 21);
+}
+.main{
+	background: white;
+	border:1px solid;
+	width:50%;
+	height:50%;
+	margin-left:25%;
+	margin-top:10%;
+	border-radius:3px;
+	padding: 2%;	
+}
+subclass{
+	font-size:20px;
+}
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	width:50%;
+	height:30px;
+}
+      
+button{
+	width:125px;
+	height:40px;
+	font-size:15px;
+	background: rgb(0, 0, 0);
+	border-radius:10px;
+	cursor:pointer;	
+	color:#fff;
+}
+button:hover{
+	background:lightgreen;
+	font-weight: bold;
+	color:rgb(0, 0, 0);
+}
+
+.container {
+	margin-right:20px;
+}
+.navigation {
+	position: sticky; 
+            z-index: 200;
+            width: 98.5%;
+            height: 50px;
+            padding: 10px;
+            background:rgb(17, 17, 17);             
+            color: #fff; 
+}
+.logo {
+            width: 25%;
+            float: left;
+            line-height: 40px;
+			margin-top: -0.5%;
+            margin-left:30px;
+        }
+
+a{
+	color:rgb(255, 255, 255);
+}
+
+.navigation-links {
+	text-align: right;
+}
+.navigation-links li {
+	display: inline-block;
+	padding: 5px 20px;	
+	border-radius: 20px;
+}
+
+.navigation-links li.active {
+	background-color: rgba(224, 245, 109, 0.3);
+}
+
+.navigation-links li:hover {
+	background-color: rgb(255, 200, 21);
+	
+	cursor: pointer;
+}
+
+	.ui_grid
+    {
+        height : 10%;
+		width: 32%;
+		position: relative;		
+        margin-top: -40%;
+		margin-left: 68%;
+		opacity: 0.8;
+    }
+
+</style>
+
+<script>
+function checkForm(form)
+{
+    if(form.name.value == "") {
+        alert("Enter Name!");
+          form.name.focus();
+          return false;
+    }
+	
+	if(form.mobile.value.length != 10) {
+		alert("Enter valid Mobile No.");
+		form.mobile.focus();
+		return false;
+	}
+	if(form.email.value == "") {
+		alert("Enter Email-Id");
+		form.email.focus();
+		return false;
+	}
+	re =  /\S+@\S+\.\S+/;
+	if(!re.test(form.email.value)) {
+		alert("Enter valid Email-Id");
+		form.email.focus();
+		return false;
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body>
+	<nav class="navigation">
+        <div class="logo"><img  src="../.././img/logo.png" alt="Italian Trulli" class = "logo"><p>MeAsIllustrator</p></div>
+        <div class="container">
+            <ul class="navigation-links">
+                <li class="active"><a href="dashboard" style="text-decoration:none; color:black;">Home</a></li>
+                <li><a href="showproductuser" style="text-decoration:none; color:black;">Product</a></li>
+                <li><a href="profile" style="text-decoration:none; color:black;">Profile</a></li>
+                <li><a href="login" style="text-decoration:none; color:black;">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class = "main"><center>
+<h1>Profile</h1>
+	<div class="subclass">
+	<form onsubmit="(checkForm(this) && false);" action="/student/profile" method="get">
+		<input type="text" placeholder="Enter Name" name="name" value='<%- user.Name %>'/><br><br>
+		<input type="text" placeholder="Enter Mobile No." name="mobile" value='<%- user.mobile %>'/><br><br>
+		<input type="text" placeholder="Enter Email-Id" name="email" value='<%- user.email %>'><br><br><br>
+
+	</form>
+	</div></center>	
+</div>
+<img  src="../.././img/ui_grid.png" alt="Italian Trulli" class = "ui_grid">
+</body>
+</html>
